@@ -1,0 +1,24 @@
+DL Lab Assignment No. 1
+
+
+I Part
+1. Activation function
+	sigmoid
+	TanH
+	ReLU
+	Leaky ReLu
+
+2. Log Loss Function
+
+	relation with cross Entropy
+
+3. MLP classifier
+	SKLearn 
+	K-ras on image data & tabular data
+
+
+II part
+
+Implementation of back-propogation on vary smaller dataset
+
+
