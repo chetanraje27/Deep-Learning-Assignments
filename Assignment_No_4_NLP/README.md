@@ -1,5 +1,3 @@
-# P4 NLP Classification
-
 ## Overview
 This Jupyter notebook implements a Natural Language Processing (NLP) classification project for spam detection in SMS messages. It is part of Deep Learning Lab Assignment 4.
 
