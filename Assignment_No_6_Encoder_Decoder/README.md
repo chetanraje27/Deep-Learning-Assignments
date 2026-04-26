@@ -7,7 +7,7 @@
 **Batch:** DL1
 
 
-**Github Submission Link:** [https://github.com/Udaysapate212/DEEP_LEARNING_ASSIGNMENTS/tree/main/ASSIGNMENT-6_Encoder_Decoder](https://github.com/Udaysapate212/DEEP_LEARNING_ASSIGNMENTS/tree/main/ASSIGNMENT-6_Encoder_Decoder)
+**Github Submission Link:** [https://github.com/chetanraje27/Deep-Learning-Assignments/tree/main/Assignment_No_6_Encoder_Decoder](https://github.com/chetanraje27/Deep-Learning-Assignments/tree/main/Assignment_No_6_Encoder_Decoder)
 
 This assignment explores the implementation and comparative analysis of Encoder-Decoder models, with a focus on the impact of the attention mechanism.
 
