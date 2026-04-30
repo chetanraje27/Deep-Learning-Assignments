@@ -6,7 +6,7 @@ This project implements a next-word prediction system using an LSTM model built 
 ## Group Details
 | # | Full Name | PRN |
 |---|-----------|-----|
-| 1 | Chetanraje Gund | 202301040090 |
+| 1 | Chetanraje Gund | 202301040080 |
 | 2 | Abhinav Badhe | 202301040100 |
 | 3 | Omkar Waghmare | 202301040010 |
 | 4 | Virendra Pandule | 202301040078 |
