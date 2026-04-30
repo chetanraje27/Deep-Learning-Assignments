@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LSTM Text Predictor</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Next Word Predictor</h2>
+    <p>Run the FastAPI server at <code>http://127.0.0.1:8000</code> before using this page.</p>
+
+    <input type="text" id="inputText" placeholder="Enter text here">
+
+    <br>
+    <button onclick="predict()">Predict</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+async function predict() {
+    console.log("Button clicked");
+
+    let text = document.getElementById("inputText").value;
+    let resultDiv = document.getElementById("result");
+
+    if (text === "") {
+        resultDiv.innerHTML = "⚠️ Enter text";
+        return;
+    }
+
+    resultDiv.innerHTML = "Predicting...";
+
+    try {
+        let response = await fetch("http://127.0.0.1:8000/predict", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                text: text
+            })
+        });
+
+        let data = await response.json();
+
+        resultDiv.innerHTML = "<b>Next Word:</b> " + data.next_word;
+
+    } catch (error) {
+        console.error(error);
+        resultDiv.innerHTML = "❌ Cannot connect to API";
+    }
+}
+</script>
+
+</body>
+</html>
